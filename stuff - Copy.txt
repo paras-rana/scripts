@@ -1,0 +1,69 @@
+The Main Perl Newsgroup:comp.lang.perl.misc
+The Perl FAQ:http://www.perl.com/faq/
+Where to download perl:http://www.activestate.com/
+
+
+SCRIPTING KNOWLEDGE Based Questions: Submit the answers with the questions in an attachment.
+
+Perl- 
+1.)	Create a Script that would read a file. Instructions are as follows: Take an input of a filename and output will be the content inside a file. (ex perl perla.txt document.txt) and it will read the content of document.txt
+	Script in script.pl:
+		While (<>) {
+			Print;
+			}
+	perl script.pl file1.txt file2.txt file3.txt
+
+	This will display all content inside file1.txt, file2.txt and file3.txt
+
+2.)	Create a Script that would do Arthimetic Operations. Instructions are as follows: Prompt the user for entering two numerical value inputs which will be used for Arthimetics. Prompt the user for entering the Arthimetic Operation Value,1 for addition, 2 for multiply.  Based on what the user has inputed, it will perform the Arthimetic Operations. 
+             Check for Bugs: If a user enters negative values, alphabetic values and display errors.
+
+	Script in script.pl
+		print "Enter first number :";
+		chomp($num1 =<STDIN>);
+		while ($num1=~/\D/){
+			print "Enter a valid number :";
+			chomp($num1 =<STDIN>);
+			}
+		print "Enter Second number :";
+		chomp($num2 =<STDIN>);
+		while ($num2=~/\D/){
+			print "Enter a valid number :";
+			chomp($num2 =<STDIN>);
+			}
+
+		print "Choose operation : 1 for addition , 2 for multiplication : ";
+		chomp($oper=<STDIN>);
+
+		while ($oper!~/[12]/){
+		print "Enter a valid operation :";
+		chomp($oper =<STDIN>);
+		}
+
+		if ($oper==1){
+			&Add;
+		} elsif ($oper==2) {
+		&Multi;
+		}
+		sub Add{
+		$add=$num1+$num2;
+		print " Sum of $num1 and $num2 is : $add";
+		}
+
+		sub Multi {
+		$multi=$num1*$num2;
+		print " Multiplication of $num1 and $num2 is : $multi"; 
+		}
+
+3.)	Create a Script that would output even lines: Instructions are as follows: Take an input of a file and output all even lines only. Hint, Use Push and Pop or use While loop.
+
+4.)	Create a Script that would output first and last line. Instructions are as follows: Create a txt file that has atleast 5 lines.  Execute this through perl program that would display the first and last line from txt file.
+
+
+Shell Script
+1.)	What is the termination of an If loop statement?
+2.)	How would you pass an argument to a shell script? Give an example
+3.)	How would you take arguments within a shell script? Give an example
+4.)	What does 2 >&1 mean?
+5.)	Write down the syntax of “for” loop
+
