@@ -1,7 +1,7 @@
 print "Enter first number :";
 chomp($num1 =<STDIN>);
 while ($num1=~/\D/)
-#comments2
+#comments3
 print "Enter Second number :";
 chomp($num2 =<STDIN>);
 while ($num2=~/\D/){
